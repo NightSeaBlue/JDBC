@@ -21,7 +21,7 @@ public class InfoView {
 	JFrame f;
 	JTextField tfName,tfID,tfTel,tfSex,tfAge,tfHome;
 	JTextArea ta;
-	JButton bAdd,bShow,bSearch,bDelete,bCancel,bExit;
+	JButton bAdd,bShow,bSearch,bDelete,bCancel,bEdit;
 
 
 	//비지니스로직 - 모델단 : DB 연동
@@ -43,7 +43,7 @@ public class InfoView {
 		bSearch = new JButton("Search");
 		bDelete = new JButton("Delete");
 		bCancel = new JButton("Cancel");
-		bExit = new JButton("수정하기");
+		bEdit = new JButton("수정하기");
 
 	} // end of InfoView
 
@@ -86,7 +86,7 @@ public class InfoView {
 		jsouth.add(bSearch);
 		jsouth.add(bDelete);
 		jsouth.add(bCancel);
-		jsouth.add(bExit);
+		jsouth.add(bEdit);
 		f.add(jsouth,BorderLayout.SOUTH);
 
 		//	DB 연동
@@ -171,7 +171,7 @@ public class InfoView {
 		});
 
 		// exit 버튼 눌렀을 때
-		bExit.addActionListener(new ActionListener() {
+		bEdit.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
